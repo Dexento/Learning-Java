@@ -1,0 +1,49 @@
+
+public class Application {
+
+	public static void main(String[] args) {
+		//Oppgave A
+		//Regn ut arealet av rektangelen med disse sidestrorrelsene: 3 og 5
+		int bredde = 3;
+		int lengde = 5;
+		
+		//Regne opprasjon
+		int total = lengde * bredde;
+		
+		System.out.println("A)");
+		System.out.println("Bredde = " + bredde);
+		System.out.println("Lengde = " + lengde);
+		System.out.println("Svar   = " + total);
+		System.out.println(" ");
+		
+		//Oppgave B
+		//Regn ut arealet av rektangelen med disse sidestorrelsene: 7 og 3
+		int breddeB = 3;
+		int lengdeB = 7;
+		
+		//regne opprasjon
+		int totalB = breddeB * lengdeB;
+		
+		System.out.println("B)");
+		System.out.println("Bredde = " + breddeB);
+		System.out.println("Lengde = " + lengdeB);
+		System.out.println("Svar   = " + totalB);
+		System.out.println(" ");
+		
+		//Oppgave C
+		//Regn ut arealet av rektangelen med disse sidestorrelsene: 4 og 9
+		int breddeC = 4;
+		int lengdeC = 9;
+		
+		//regne opprasjon
+		int totalC = breddeC * lengdeC;
+		
+		System.out.println("C)");
+		System.out.println("Bredde = " + breddeC);
+		System.out.println("Lengde = " + lengdeC);
+		System.out.println("Svar   = " + totalC);
+		
+
+	}
+
+}
