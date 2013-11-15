@@ -7,6 +7,7 @@ public class Application {
         
         double myDouble = 3.14;
         float myFloat = 23f;
+        byte myByte = 24;
         
         char myChar = 's';
         boolean myBoolean = true;
@@ -17,6 +18,7 @@ public class Application {
         System.out.println(myLong);
         System.out.println(myDouble);
         System.out.println(myFloat);
+        system.out.println(myByte);
         System.out.println(myChar);
         System.out.println(myBoolean);
 	}
