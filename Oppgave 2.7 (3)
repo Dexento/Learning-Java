@@ -1,4 +1,3 @@
-
 public class Application {
 
         public static void main(String[] args) {
@@ -13,7 +12,7 @@ public class Application {
         	
         	//Beregn omkretsen av sirkelen nar r er 10
         	String fortekstA = "Omkretsen av en sirkel med radius 10";
-        	double piA = 2.14;
+        	double piA = 3.14;
         	double radiusA = 10;
         	double omkretsA = pi * pi * radius;
         	System.out.println("B)");
