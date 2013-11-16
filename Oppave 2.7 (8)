@@ -1,0 +1,39 @@
+
+public class Application {
+
+        public static void main(String[] args) {
+        	//En kule med radius r har volum V = 4(pi)r^3/3. Skriv et program som beregner
+        	//volumet og lager en utskrift av resultatet for kuler med radius henholdsvis
+        	//1,2 og 3.
+        	
+        	//Oppgave A med radius 1:
+        	
+        	String fortekstA = "Volumet av en sirkel med radius ";
+        	double pi = 3.14;
+        	int radiusA = 1;
+        	double volumA = pi * pi * pi * pi * radiusA * radiusA * radiusA/3;
+        	
+        	System.out.println("A)");
+        	System.out.println(fortekstA + radiusA + " er " + volumA);
+        	System.out.println(" ");
+        	
+        	//Oppgave B med radius 2:
+        	
+        	String fortekstB = "Volumet av en sirkel med radius ";
+        	int radiusB = 2;
+        	double volumB = pi * pi * pi * pi * radiusB * radiusB * radiusB/3;
+        	
+        	System.out.println("B)");
+        	System.out.println(fortekstB + radiusB + " er " + volumB);
+        	System.out.println(" ");
+        	
+        	//Oppgave C med radius 3:
+        	
+        	String fortekstC = "Volumet av en sirkel med radius ";
+        	int radiusC = 3;
+        	double volumC = pi * pi * pi * pi * radiusC * radiusC * radiusC/3;
+        	
+        	System.out.println("C)");
+        	System.out.println(fortekstC + radiusC + " er " + volumC);
+        }
+}
