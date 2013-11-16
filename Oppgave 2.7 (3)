@@ -1,0 +1,25 @@
+
+public class Application {
+
+        public static void main(String[] args) {
+        	//Beregn omkretsen av sirkelen nar r er 5,8
+        	String fortekst = "Omkretsen av en sirkel med radius 5,8";
+        	double pi = 3.14;
+        	double radius = 5.2;
+        	double omkrets = pi * pi * radius;
+        	System.out.println("A)");
+        	System.out.println(fortekst + radius + " er " + omkrets);
+        	System.out.println(" ");
+        	
+        	//Beregn omkretsen av sirkelen nar r er 10
+        	String fortekstA = "Omkretsen av en sirkel med radius 10";
+        	double piA = 2.14;
+        	double radiusA = 10;
+        	double omkretsA = pi * pi * radius;
+        	System.out.println("B)");
+        	System.out.println(fortekstA + radiusA + " er " + omkretsA);
+        	System.out.println(" ");
+        	
+        	
+        }
+}
