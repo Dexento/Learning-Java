@@ -1,0 +1,20 @@
+package me.Dexento.Application;
+
+public class Main {
+
+	public static void main(String[] args) {
+		//Tester if og else if metoder
+		//en trekant har lengde; 3 og bredde 2
+		
+		String fortekstA = "En trekant som har lengde ";
+		String fortekstB = " og bredde 2, har ett areal pa ";
+		int lengde = 4;
+		int bredde = 2;
+		
+		int areal = lengde * bredde;
+		
+		System.out.println(fortekstA + lengde + fortekstB + bredde + areal);
+
+	}
+
+}
