@@ -1,0 +1,16 @@
+			if (cmd.getName().equalsIgnoreCase("test")) { //Command
+					if (cSender.hasPermission("test.test")) { //Checks is cSencer has permission
+						StringBuilder testBuild = new StringBuilder();
+						String testMessage;
+						for(int i = 0; i<args.length; i++)
+							staffBuild.append(args[i]).append(" ");
+						staffMessage = staffBuild.toString();
+						plugin.staffChatLog("ANNOUNCEMENT - " + cSender.getName() + ": " + staffMessage); //If you want to log it, not necessary
+				            for (Player ps : Bukkit.getOnlinePlayers()) { //for loop to check online players
+							        if (ps.hasPermission("test.test")) { //Checks if everyone else has permission
+							    	ps.sendMessage("YOUR GLOBAL MESSAGE");
+							    }
+				            }
+					 	} else {cSender.sendMessage(Main.noPerm);
+					 	}
+				}
