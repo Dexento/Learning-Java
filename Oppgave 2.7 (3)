@@ -1,24 +1,114 @@
-public class Application {
+					
+			if (event.getPlayer().getItemInHand().getType() == Material.COMPASS) {
+				if (event.getAction() != Action.PHYSICAL && event.getAction() != Action.LEFT_CLICK_AIR && event.getAction() != Action.LEFT_CLICK_BLOCK) {
+					Inventory i = Bukkit.createInventory(null, 45, "Where do you want to go?");
+					
+					ItemStack grass = new ItemStack(Material.GRASS);
+					ItemMeta grassMeta = grass.getItemMeta();
+					grassMeta.setDisplayName(ChatColor.YELLOW + "Creative");
+					List<String> grassLore = Arrays.asList(ChatColor.GRAY + "Free build in our creative server. Realease your creative mind!");
+					grassMeta.setLore(grassLore);
+					grass.setItemMeta(grassMeta);
+					
+					ItemStack ironpick = new ItemStack(Material.IRON_PICKAXE);
+					ItemMeta ironpickMeta = ironpick.getItemMeta();
+					ironpickMeta.setDisplayName(ChatColor.YELLOW + "Survival Factions");
+					List<String> ironpickLore = Arrays.asList(ChatColor.GRAY + "Make enemies and friends in our factions server!");
+					ironpickMeta.setLore(ironpickLore);
+					ironpick.setItemMeta(ironpickMeta);
+					
+					ItemStack tunic = new ItemStack(Material.LEATHER_CHESTPLATE);
+					ItemMeta tunicMeta = tunic.getItemMeta();
+					tunicMeta.setDisplayName(ChatColor.GREEN + "Wardrobe");
+					List<String> tunicLore = Arrays.asList(ChatColor.GRAY + "Change your armour! (Premium feature)");
+					tunicMeta.setLore(tunicLore);
+					tunic.setItemMeta(tunicMeta);
+					
+					ItemStack parkour = new ItemStack(Material.LADDER);
+					ItemMeta parkourMeta = parkour.getItemMeta();
+					parkourMeta.setDisplayName(ChatColor.GREEN + "Parkour");
+					List<String> parkourLore = Arrays.asList(ChatColor.GRAY + "Teleport to the Hub parkour!");
+					parkourMeta.setLore(parkourLore);
+					parkour.setItemMeta(parkourMeta);
+					
+					ItemStack pearl = new ItemStack(Material.ENDER_PEARL);
+					ItemMeta pearlMeta = pearl.getItemMeta();
+					pearlMeta.setDisplayName(ChatColor.AQUA + "Spawn");
+					List<String> pearlLore = Arrays.asList(ChatColor.GRAY + "Go back to spawn!");
+					pearlMeta.setLore(pearlLore);
+					pearl.setItemMeta(pearlMeta);
+					
+					ItemStack diasword = new ItemStack(Material.DIAMOND_SWORD);
+					ItemMeta diaswordMeta = diasword.getItemMeta();
+					diaswordMeta.setDisplayName(ChatColor.YELLOW + "The PvP Arena");
+					List<String> diaswordLore = Arrays.asList(ChatColor.GRAY + "Practive your PvP skills in the PvP arena!");
+					diaswordMeta.setLore(diaswordLore);
+					diasword.setItemMeta(diaswordMeta);
+					
+					ItemStack bow = new ItemStack(Material.BOW);
+					ItemMeta bowMeta = bow.getItemMeta();
+					bowMeta.setDisplayName(ChatColor.YELLOW + "Survival Games");
+					List<String> bowLore = Arrays.asList(ChatColor.GRAY + "Play an intense game of ImpulseMc Survival Games!");
+					bowMeta.setLore(bowLore);
+					bow.setItemMeta(bowMeta);
+					
+					i.setItem(33, grass);
+					i.setItem(29, ironpick);
+					i.setItem(22, pearl);
+					i.setItem(15, diasword);
+					i.setItem(11, bow);
+					i.setItem(4, parkour);
+					i.setItem(40, tunic);
+					
+					event.getPlayer().openInventory(i);
+				}
+			}
+		} catch (Exception e) {
 
-        public static void main(String[] args) {
-        	//Beregn omkretsen av sirkelen nar r er 5,8
-        	String fortekst = "Omkretsen av en sirkel med radius 5,8";
-        	double pi = 3.14;
-        	double radius = 5.2;
-        	double omkrets = pi * pi * radius;
-        	System.out.println("A)");
-        	System.out.println(fortekst + radius + " er " + omkrets);
-        	System.out.println(" ");
-        	
-        	//Beregn omkretsen av sirkelen nar r er 10
-        	String fortekstA = "Omkretsen av en sirkel med radius 10";
-        	double piA = 3.14;
-        	double radiusA = 10;
-        	double omkretsA = pi * pi * radius;
-        	System.out.println("B)");
-        	System.out.println(fortekstA + radiusA + " er " + omkretsA);
-        	System.out.println(" ");
-        	
-        	
-        }
-}
+		}
+	}
+	
+		@EventHandler
+	public void onInventoryClick(InventoryClickEvent event) {
+		try {
+			if (event.getInventory().getTitle() == "Where do you want to go?"
+					&& event.getCurrentItem() != null) {
+				switch (event.getCurrentItem().getType()) {
+				case GRASS:
+					event.getWhoClicked().teleport(
+							new Location(Bukkit.getWorld("world"), 0.5, 85, 60.5));
+					break;
+				case IRON_PICKAXE:
+					event.getWhoClicked().teleport(
+							new Location(Bukkit.getWorld("world"), 60.5, 85, 0.5, 270.5f, 1f));
+					break;
+				case DIAMOND_SWORD:
+					event.getWhoClicked().teleport(
+							new Location(Bukkit.getWorld("world"), 0.5, 85, -56.5, 180.5f, 1f));
+					break;
+				case BOW:
+					event.getWhoClicked().teleport(
+							new Location(Bukkit.getWorld("world"), -59.5, 85, 0.5, 90f, 1f));
+					break;
+				case ENDER_PEARL:
+					event.getWhoClicked().teleport(
+							new Location(Bukkit.getWorld("world"), 0.5, 87, 0.5, 180f, 1f));
+					break;
+				case LEATHER_CHESTPLATE:
+					event.getWhoClicked().teleport(
+							new Location(Bukkit.getWorld("world"), -26.5, 86, 30.5, 90f, 1f));
+					break;
+				case LADDER:
+					event.getWhoClicked().teleport(
+							new Location(Bukkit.getWorld("world"), 30.5, 95, 30.5, 180f, 1f));
+				default:
+					break;
+				}
+				event.setCancelled(true);
+				event.getWhoClicked().closeInventory();
+				}
+		} catch (Exception e) {
+		}
+	}
+	
+	
