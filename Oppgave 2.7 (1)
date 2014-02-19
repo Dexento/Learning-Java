@@ -1,3 +1,41 @@
+package com.Dexento.Wardrobe;
+
+import java.util.Arrays;
+import java.util.List;
+
+import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
+import org.bukkit.Color;
+import org.bukkit.Material;
+import org.bukkit.World;
+import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
+import org.bukkit.event.block.Action;
+import org.bukkit.event.inventory.InventoryClickEvent;
+import org.bukkit.event.player.AsyncPlayerChatEvent;
+import org.bukkit.event.player.PlayerInteractEvent;
+import org.bukkit.event.player.PlayerJoinEvent;
+import org.bukkit.inventory.Inventory;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.inventory.meta.LeatherArmorMeta;
+
+public class MainListener implements Listener {
+	public Main plugin;
+	public MainListener(Main plugin) {
+		this.plugin = plugin;
+	}
+	
+	private int capsCount;
+
+	@EventHandler
+	public void onInventoryClick(InventoryClickEvent event) {
+		try {
+			
+		}
+	}
+	
 	@EventHandler
 	public void onPlayerInteract(PlayerInteractEvent event) {
 		try {
@@ -34,7 +72,7 @@
 					ItemStack redBoots = new ItemStack(Material.LEATHER_BOOTS);
 					LeatherArmorMeta redBootsMeta = (LeatherArmorMeta) redBoots.getItemMeta();
 					redBootsMeta.setDisplayName(Color.RED + "Red Boots!");
-					List<String> redBootsLore = Arrays.asList(ChatColor.GRAY + "A nice new " + ChatColor.RED + "red " + ChatColor.GRAY + "boots!");
+					List<String> redBootsLore = Arrays.asList(ChatColor.GRAY + "Nice new pair of " + ChatColor.RED + "red " + ChatColor.GRAY + "boots!");
 					redBootsMeta.setLore(redBootsLore);
 					redBootsMeta.setColor(Color.RED);
 					redBoots.setItemMeta(redBootsMeta);
@@ -68,44 +106,43 @@
 					ItemStack purpBoots = new ItemStack(Material.LEATHER_BOOTS);
 					LeatherArmorMeta purpBootsMeta = (LeatherArmorMeta) purpBoots.getItemMeta();
 					purpBootsMeta.setDisplayName(ChatColor.DARK_PURPLE + "Purple Boots");
-					List<String> purpBootsLore = Arrays.asList(ChatColor.GRAY + "A nice new " + ChatColor.DARK_PURPLE + "purple " + ChatColor.GRAY + "boots!");
+					List<String> purpBootsLore = Arrays.asList(ChatColor.GRAY + "Nice new pair of " + ChatColor.DARK_PURPLE + "purple " + ChatColor.GRAY + "boots!");
 					purpBootsMeta.setLore(purpBootsLore);
 					purpPantsMeta.setColor(Color.PURPLE);
 					purpBoots.setItemMeta(purpBootsMeta);
-					
-					//Yellow armour
+					//Orange armour
 					//-----------------------------------------------------------------------
-					ItemStack yellowHelmet = new ItemStack(Material.LEATHER_HELMET);
-					LeatherArmorMeta yellowHelmetMeta = (LeatherArmorMeta) yellowHelmet.getItemMeta();
-					yellowHelmetMeta.setDisplayName(ChatColor.YELLOW + "Yellow Helmet!");
-					List<String> yellowHelmetLore = Arrays.asList(ChatColor.GRAY + "A nice new " + ChatColor.YELLOW + "yellow " + ChatColor.GRAY + "helmet!");
-					yellowHelmetMeta.setLore(yellowHelmetLore);
-					yellowHelmetMeta.setColor(Color.YELLOW);
-					yellowHelmet.setItemMeta(yellowHelmetMeta);
+					ItemStack orangeHelmet = new ItemStack(Material.LEATHER_HELMET);
+					LeatherArmorMeta orangeHelmetMeta = (LeatherArmorMeta) orangeHelmet.getItemMeta();
+					orangeHelmetMeta.setDisplayName(ChatColor.GOLD + "Orange Helmet!");
+					List<String> orangeHelmetLore = Arrays.asList(ChatColor.GRAY + "A nice new " + ChatColor.GOLD + "orange " + ChatColor.GRAY + "helmet!");
+					orangeHelmetMeta.setLore(orangeHelmetLore);
+					orangeHelmetMeta.setColor(Color.ORANGE);
+					orangeHelmet.setItemMeta(orangeHelmetMeta);
 					
-					ItemStack yellowTunic = new ItemStack (Material.LEATHER_CHESTPLATE);
-					LeatherArmorMeta yellowTunicMeta = (LeatherArmorMeta) yellowTunic.getItemMeta();
-					yellowTunicMeta.setDisplayName(ChatColor.YELLOW + "Yellow Chestplate");
-					List<String> yellowTunicLore = Arrays.asList(ChatColor.GRAY + "A nice new " + ChatColor.YELLOW + "yellow " + ChatColor.GRAY + "chestplate!");
-					yellowTunicMeta.setLore(yellowTunicLore);
-					yellowTunicMeta.setColor(Color.YELLOW);
-					yellowTunic.setItemMeta(yellowTunicMeta);
+					ItemStack orangeTunic = new ItemStack (Material.LEATHER_CHESTPLATE);
+					LeatherArmorMeta orangeTunicMeta = (LeatherArmorMeta) orangeTunic.getItemMeta();
+					orangeTunicMeta.setDisplayName(ChatColor.GOLD + "Orange Chestplate");
+					List<String> orangeTunicLore = Arrays.asList(ChatColor.GRAY + "A nice new " + ChatColor.GOLD + "orange " + ChatColor.GRAY + "chestplate!");
+					orangeTunicMeta.setLore(orangeTunicLore);
+					orangeTunicMeta.setColor(Color.ORANGE);
+					orangeTunic.setItemMeta(orangeTunicMeta);
 					
-					ItemStack yellowPants = new ItemStack(Material.LEATHER_LEGGINGS);
-					LeatherArmorMeta yellowPantsMeta = (LeatherArmorMeta) yellowPants.getItemMeta();
-					yellowPantsMeta.setDisplayName(ChatColor.YELLOW + "Yellow Leggings!");
-					List<String> yellowPantsLore = Arrays.asList(ChatColor.GRAY + "A nice new " + ChatColor.YELLOW + "yellow " + ChatColor.GRAY + "leggings!");
-					yellowPantsMeta.setLore(yellowPantsLore);
-					yellowPantsMeta.setColor(Color.YELLOW);
-					yellowPants.setItemMeta(yellowPantsMeta);
+					ItemStack orangePants = new ItemStack(Material.LEATHER_LEGGINGS);
+					LeatherArmorMeta orangePantsMeta = (LeatherArmorMeta) orangePants.getItemMeta();
+					orangePantsMeta.setDisplayName(ChatColor.GOLD + "Orange Leggings!");
+					List<String> orangePantsLore = Arrays.asList(ChatColor.GRAY + "A nice new " + ChatColor.GOLD + "orange " + ChatColor.GRAY + "leggings!");
+					orangePantsMeta.setLore(orangePantsLore);
+					orangePantsMeta.setColor(Color.ORANGE);
+					orangePants.setItemMeta(orangePantsMeta);
 					
-					ItemStack yellowBoots = new ItemStack(Material.LEATHER_BOOTS);
-					LeatherArmorMeta yellowBootsMeta = (LeatherArmorMeta) yellowBoots.getItemMeta();
-					yellowBootsMeta.setDisplayName(ChatColor.YELLOW + "Yellow Boots");
-					List<String> yellowBootsLore = Arrays.asList(ChatColor.GRAY + "A nice new " + ChatColor.YELLOW + "yellow " + ChatColor.GRAY + "boots!");
-					yellowBootsMeta.setLore(yellowBootsLore);
-					yellowBootsMeta.setColor(Color.YELLOW);
-					yellowBoots.setItemMeta(yellowBootsMeta);
+					ItemStack orangeBoots = new ItemStack(Material.LEATHER_BOOTS);
+					LeatherArmorMeta orangeBootsMeta = (LeatherArmorMeta) orangeBoots.getItemMeta();
+					orangeBootsMeta.setDisplayName(ChatColor.GOLD + "Orange Boots");
+					List<String> orangeBootsLore = Arrays.asList(ChatColor.GRAY + "Nice new pair of " + ChatColor.GOLD + "orange " + ChatColor.GRAY + "boots!");
+					orangeBootsMeta.setLore(orangeBootsLore);
+					orangeBootsMeta.setColor(Color.ORANGE);
+					orangeBoots.setItemMeta(orangeBootsMeta);
 					
 					//Diamond armour
 					//------------------------------------------------------------------------
@@ -133,9 +170,110 @@
 					ItemStack diamondBoots = new ItemStack(Material.DIAMOND_BOOTS);
 					ItemMeta diamondBootsMeta = diamondBoots.getItemMeta();
 					diamondBootsMeta.setDisplayName(ChatColor.AQUA + "Diamond Boots");
-					List<String> diamondBootsLore = Arrays.asList(ChatColor.GRAY + "A nice new " + ChatColor.AQUA + "diamond " + ChatColor.GRAY + "boots!");
+					List<String> diamondBootsLore = Arrays.asList(ChatColor.GRAY + "Nice new pair of " + ChatColor.AQUA + "diamond " + ChatColor.GRAY + "boots!");
 					diamondBootsMeta.setLore(diamondBootsLore);
 					diamondBoots.setItemMeta(diamondBootsMeta);
 					
 					//Gray armour
 					//----------------------------------------------------------------------------
+					ItemStack grayHelmet = new ItemStack(Material.LEATHER_HELMET);
+					LeatherArmorMeta grayHelmetMeta = (LeatherArmorMeta) grayHelmet.getItemMeta();
+					grayHelmetMeta.setDisplayName(ChatColor.DARK_GRAY + "Gray Helmet!");
+					List<String> grayHelmetLore = Arrays.asList(ChatColor.GRAY + "A nice new " + ChatColor.DARK_GRAY + "gray " + ChatColor.GRAY + "helmet!");
+					grayHelmetMeta.setLore(grayHelmetLore);
+					grayHelmetMeta.setColor(Color.GRAY);
+					grayHelmet.setItemMeta(grayHelmetMeta);
+					
+					ItemStack grayTunic = new ItemStack(Material.LEATHER_CHESTPLATE);
+					LeatherArmorMeta grayTunicMeta = (LeatherArmorMeta) grayTunic.getItemMeta();
+					grayTunicMeta.setDisplayName(ChatColor.DARK_GRAY + "Gray Chestplate!");
+					List<String> grayTunicLore = Arrays.asList(ChatColor.GRAY + "A nice new " + ChatColor.DARK_GRAY + "gray " + ChatColor.GRAY + "chestplate!");
+					grayTunicMeta.setLore(grayTunicLore);
+					grayTunicMeta.setColor(Color.GRAY);
+					grayTunic.setItemMeta(grayTunicMeta);
+					
+					ItemStack grayPants = new ItemStack(Material.LEATHER_LEGGINGS);
+					LeatherArmorMeta grayPantsMeta = (LeatherArmorMeta) grayPants.getItemMeta();
+					grayPantsMeta.setDisplayName(ChatColor.DARK_GRAY + "Gray Leggings!");
+					List<String> grayPantsLore = Arrays.asList(ChatColor.GRAY + "A nice new " + ChatColor.DARK_GRAY + "gray " + ChatColor.GRAY + "pants!");
+					grayPantsMeta.setLore(grayPantsLore);
+					grayPantsMeta.setColor(Color.GRAY);
+					grayPants.setItemMeta(grayPantsMeta);
+					
+					ItemStack grayBoots = new ItemStack(Material.LEATHER_BOOTS);
+					LeatherArmorMeta grayBootsMeta = (LeatherArmorMeta) grayBoots.getItemMeta();
+					grayBootsMeta.setDisplayName(ChatColor.DARK_GRAY + "Gray Boots!");
+					List<String> grayBootsLore = Arrays.asList(ChatColor.GRAY + "Nice new pair of " + ChatColor.DARK_GRAY + "gray " + ChatColor.GRAY + "boots!");
+					grayBootsMeta.setLore(grayBootsLore);
+					grayBootsMeta.setColor(Color.GRAY);
+					grayBoots.setItemMeta(grayBootsMeta);
+					
+					//Cyan armour
+					//------------------------------------------------------------------------------
+					ItemStack cyanHelmet = new ItemStack(Material.LEATHER_HELMET);
+					LeatherArmorMeta cyanHelmetMeta = (LeatherArmorMeta) cyanHelmet.getItemMeta();
+					cyanHelmetMeta.setDisplayName(ChatColor.DARK_AQUA + "Cyan Helmet!");
+					List<String> cyanHelmetLore = Arrays.asList(ChatColor.GRAY + "A nice new " + ChatColor.DARK_AQUA + "cyan " + ChatColor.GRAY + "helmet!");
+					cyanHelmetMeta.setLore(cyanHelmetLore);
+					cyanHelmetMeta.setColor(Color.TEAL);
+					cyanHelmet.setItemMeta(cyanHelmetMeta);
+					
+					
+					
+					
+					
+					
+		
+					
+					
+				
+					
+					event.getPlayer().openInventory(i);
+				}
+			}
+		} catch (Exception e) {
+
+		}
+	}
+	@EventHandler
+	public void onJoin(PlayerJoinEvent e){
+		Player p = e.getPlayer();
+		if(p.hasPermission("impulse.admintool")){
+		 ItemStack admintool = new ItemStack(Material.EMERALD);
+		 ItemMeta admintoolMeta = admintool.getItemMeta();
+		 admintoolMeta.setDisplayName(ChatColor.YELLOW + "Admin Tool");
+		 admintool.setItemMeta(admintoolMeta);
+		 
+		 p.getInventory().setItem(3, admintool);
+		}
+	}
+	@EventHandler
+	public void onChat (AsyncPlayerChatEvent event) {
+		Player p = event.getPlayer();
+		String message = event.getMessage();
+		if (Main.chatMuted == true) {
+			if (!p.hasPermission("impulse.mutebypass")) {
+				p.sendMessage(ChatColor.YELLOW + "[Impulse] " + ChatColor.RED + "The chat has been muted, you will be notified when is re-enabled.");
+				try {
+					event.setCancelled(true);
+				} catch (Exception ex) {
+					event.setFormat("");
+				}
+			}
+		} else {
+			for(int i = 10; i<message.length(); i++) {
+				if(Character.isUpperCase(message.charAt(i)) && !Character.isLetter(message.charAt(i))) {
+				capsCount++;
+				if (capsCount > (message.length() * 0.50)) {
+					message = message.toLowerCase();
+					char[] msg = message.toCharArray();
+					msg[0] = Character.toUpperCase(msg[0]);
+					msg.toString();
+					message = new String(msg);
+					event.setMessage(message);
+					}
+				}
+			}
+	    }
+	}
+}
